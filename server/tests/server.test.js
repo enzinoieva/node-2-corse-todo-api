@@ -11,11 +11,11 @@ const todos =  [{
   text: 'Second test todo'
 }]
 
-beforeEach((done)=>{
+beforeEach((done) => {
 // Todo.remove({}).then(()=>done());
-Todo.remove({}).then(()=>{
+Todo.remove({}).then(() => {
     return Todo.insertMany(todos);
-  }).then(()=>done());
+  }).then(() => done());
 });
 
 describe('POST /todos', () => {
